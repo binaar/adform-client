@@ -75,6 +75,11 @@ class Client
     protected $dataProviderAudience;
 
     /**
+     * @var CookieProvider
+     */
+    protected $cookies;
+    
+    /**
      * Constructor.
      *
      * @param string $username
@@ -171,5 +176,18 @@ class Client
         }
 
         return $this->dataProviderAudience;
+    }
+    
+    /**
+     * A proxy method for working with cookies
+     *
+     * @return CookieProvider
+     */
+    public function cookies()
+    {
+        if (is_null($this->cookies)) {
+            $this->cookies = new CookieProvider($this->httpClient, $this->cache);
+        }
+        return $this->cookies;
     }
 }
