@@ -502,7 +502,7 @@ class Segment implements JsonSerializable
         $json->dataProviderId = (int)$this->dataProviderId;
 
         if (!is_null($this->status)) {
-            $json->status = $this->status->getValue();
+            $json->status = $this->status;
         } else {
             $json->status = null;
         }
