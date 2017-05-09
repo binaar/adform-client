@@ -22,7 +22,6 @@ class EventHydrator extends Event
 
         $event->id = $stdClass->id;
         $event->title = $stdClass->title;
-        $event->description = $stdClass->description;
         $event->status = $stdClass->status;
         $event->receiverId = $stdClass->receiverId;
         $event->receiverName = $stdClass->receiverName;
