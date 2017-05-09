@@ -9,6 +9,7 @@ use Audiens\AdForm\Provider\CategoryProvider;
 use Audiens\AdForm\Provider\SegmentProvider;
 use Audiens\AdForm\Provider\DataUsageProvider;
 use Audiens\AdForm\Provider\DataProviderAudienceProvider;
+use Audiens\AdForm\Provider\CookieProvider;
 
 /**
  * Class Adform
